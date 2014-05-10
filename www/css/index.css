@@ -1,0 +1,73 @@
+.left{
+	float:left;
+}
+.clearfix{
+	clear:both;
+}
+.subheader{
+	color:#0197CE;
+	padding:0;
+	margin:0;
+	margin-left:110px;
+}
+.company_image{
+	padding-top:20px;
+	padding-left:7px;
+}
+.company-info-block h4{
+	padding:0;
+	margin:0;
+	margin-bottom:5px;
+}
+.company-info-block p{
+	margin:0;
+	padding:0;
+}
+#company-header-wrapper{
+	text-align:center;
+}
+#profile-navbar{
+	margin-bottom:10px;
+}
+.profile-button{
+	font-size:13px!important;
+}
+.ui-page {
+    -webkit-backface-visibility: hidden;
+}
+
+/* Styles for tables of data */
+.dataTable {width:100%; height:auto; }
+
+.dataTable td, .dataTable caption { /*border-bottom: 1px solid #ccc;*/ }
+
+.dataTable td, .dataTable th { padding: 3px; }
+
+.dataTable th,.dataTable th a { color: #000; }
+
+.dataTableBottom td { border-bottom: 0px;}
+
+/* to get rid of bottom line on tables, uncomment: */
+/* td.dataTableBottom {border-bottom:0;} */
+
+.dataTable .total td {
+  font-weight: bold;
+}
+
+.dataTable .special td { color: #CC9900; }
+
+/*
+#app-landing-home, #sign-up, body{
+	background:url(../images/splash_ldpi.png) no-repeat fixed;
+	 -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+*/
+#signup-login-panel{
+	margin-top:25%;
+}
+#signup-panel{
+	margin-top:5%;
+}

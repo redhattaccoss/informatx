@@ -1,0 +1,39 @@
+<!-- app home landing -->
+<div data-role="header" data-position="fixed">
+	<a href="#home_panel_right" data-icon="back" data-iconpos="notext" class="ui-link ui-btn-left ui-btn ui-icon-back ui-btn-icon-notext ui-shadow ui-corner-all" data-role="button" role="button"></a>
+	<h1 class="ui-title app-logo" role="heading" aria-level="1"><img src="img/amarantus.png" alt="Amarantus"/></h1>
+</div>
+<div role="main" class="ui-content" id="about-us-landing-page">
+	
+	<h2>General Information</h2>
+	<p><%=company.attributes.Company.description%></p>
+	<p><a href="mailto:<%=company.attributes.Company.email%>"><%=company.attributes.Company.email%></a></p>
+	<p><%=company.attributes.Company.fax%></p>
+	<p><%=company.attributes.Company.website%></p>
+	<p><a href="https://maps.google.com/?q=<%=company.attributes.Company.address%>,<%=company.attributes.Company.city%>,<%=company.attributes.Company.state%>,<%=company.attributes.Company.country%>" target="_self"><%=company.attributes.Company.address%>,<%=company.attributes.Company.city%>,<%=company.attributes.Company.state%>,<%=company.attributes.Company.country%></a></p>
+	<h2>Contact Information</h2>
+	<p><a href="mailto:<%=company.attributes.Company.email%>"><%=company.attributes.Company.email%></a></p>
+	<p><a href="tel:<%=company.attributes.Company.fax%>"><%=company.attributes.Company.fax%></a></p>
+
+</div>
+<div data-role="footer" data-position="fixed">
+	<!-- navbar -->
+	<div data-role="navbar">
+		<ul>
+			<li>
+				<a href="#home" data-icon="home" data-iconpos="notext"></a>
+			</li>
+			<li>
+				<a href="#about" data-icon="user" data-iconpos="notext" class="ui-btn-active"></a>
+			</li>
+			<li>
+				<a href="#" data-icon="video" data-iconpos="notext" ></a>
+			</li>
+			<li>
+				<a href="#" data-icon="phone" data-iconpos="notext" ></a>
+			</li>
+		</ul>
+	</div>
+	<!-- /navbar -->
+</div>
+<!-- /app home landing -->

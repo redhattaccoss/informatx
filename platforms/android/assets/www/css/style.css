@@ -1,0 +1,33 @@
+/* Galaxy Iphone */
+@media all and (max-width: 568px) and (min-width: 320px) {
+	.ui-header .ui-title, .ui-footer .ui-title{
+		margin:0 10%;
+	}
+}
+.app-stock-last-price-only{
+	font-size:2em;
+	font-weight:bold;
+	display:block;
+	text-align:center;
+}
+.stock-information{
+	background-color:#fff;
+}
+.stock-information p{
+	margin-top:0;
+	margin-bottom:5px;
+}
+span.mute{
+	color:#ccc;
+}
+.stock{
+	text-align:center;
+	display:block;
+}
+.stock-positive{
+	color:#16A085;
+}
+.stock-negative{
+	color:#ff0;
+}
+

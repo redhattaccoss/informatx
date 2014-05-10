@@ -1,0 +1,118 @@
+<!-- app home landing -->
+<div data-role="header" data-position="fixed">
+	<a href="#home_panel_right" data-icon="search" data-iconpos="notext" class="ui-link ui-btn-left ui-btn ui-icon-search ui-btn-icon-notext ui-shadow ui-corner-all" data-role="button" role="button"></a>
+	<h1 class="ui-title app-logo" role="heading" aria-level="1"><img src="img/amarantus.png" alt="Amarantus"/></h1>
+</div>
+<div role="main" class="ui-content" id="app-landing-home">
+	<div>
+		<!-- stock information -->
+		<div class="ui-grid-b stock-information">
+			<div class="ui-block-a">
+				<p>
+					<strong class="app-stock-last-price-only"><%=company.attributes.CompanyStockInformation.LastTradePriceOnly%></strong>
+				</p>
+				<p>
+					<span class="stock stock-positive"><%=company.attributes.CompanyStockInformation.Change%></span>
+				</p>
+			</div>
+			<div class="ui-block-b">
+				<p>
+					<span class="mute">VOL.</span> <%=company.attributes.CompanyStockInformation.Volume%>
+				</p>
+				<p>
+					<span class="mute">MKT CAP.</span> <%=company.attributes.CompanyStockInformation.MarketCapitalization%>
+				</p>
+			</div>
+			<div class="ui-block-c">
+				<p>
+					<span class="mute">Open</span> <%=company.attributes.CompanyStockInformation.Open%>
+				</p>
+				<p>
+					<span class="mute">High</span> <%=company.attributes.CompanyStockInformation.DaysHigh%>
+				</p>
+				<p>
+					<span class="mute">Low</span> <%=company.attributes.CompanyStockInformation.DaysLow%>
+				</p>
+			</div>
+		</div>
+		<!-- /stock information -->
+		<!-- main menu -->
+		<ul data-role="listview" data-inset="true">
+			<li data-role="list-divider">
+				Latest News <span class="ui-li-count"><%=company.attributes.CompanyNews.length%></span>
+			</li>
+			<% _.each(company.attributes.CompanyNews, function(news) { %>
+				<li>
+					<a href="<%=news.link%>" class="external_links_loader">
+						<p style="margin-top:20px;"><strong><%=news.title%></strong></p>
+						<p><%=news.description%></p>
+						<p class="ui-li-aside">
+							<strong><%=news.pubDate%></strong>
+						</p>
+					</a>
+				</li>
+			<% })%>
+			
+			
+			
+			<li data-role="list-divider">
+				SEC Fillings <span class="ui-li-count"><%=company.attributes.sec_fillings.length%></span>
+			</li>
+			
+			
+			<% _.each(company.attributes.sec_fillings, function(item) { %>
+			<li>
+				<a href="#viewcontent/<%=item.CompanyContent.id%>">
+				<p style="margin-top:20px;"><strong><%=item.CompanyContent.title%></strong></p>
+				<p>
+					<%=item.CompanyContent.content%>
+				</p>
+				<p class="ui-li-aside">
+					<strong><%=item.CompanyContent.date_published%></strong>
+				</p> </a>
+			</li>
+			<% })%>
+			
+			
+			<li data-role="list-divider">
+				Investor Presentations <span class="ui-li-count"><%=company.attributes.investor_presentations.length%></span>
+			</li>
+			<% _.each(company.attributes.investor_presentations, function(item) { %>
+			<li>
+				<a href="#viewcontent/<%=item.CompanyContent.id%>">
+				<p style="margin-top:20px;"><strong><%=item.CompanyContent.title%></strong></p>
+				<p>
+					<%=item.CompanyContent.content%>
+				</p>
+				<p class="ui-li-aside">
+					<strong><%=item.CompanyContent.date_published%></strong>
+				</p> </a>
+			</li>
+			<% })%>
+			
+			
+		</ul>
+		<!-- /main menu -->
+	</div>
+</div>
+<div data-role="footer" data-position="fixed">
+	<!-- navbar -->
+	<div data-role="navbar">
+		<ul>
+			<li>
+				<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-active"></a>
+			</li>
+			<li>
+				<a href="#about" data-icon="user" data-iconpos="notext" ></a>
+			</li>
+			<li>
+				<a href="#" data-icon="video" data-iconpos="notext" ></a>
+			</li>
+			<li>
+				<a href="#" data-icon="phone" data-iconpos="notext" ></a>
+			</li>
+		</ul>
+	</div>
+	<!-- /navbar -->
+</div>
+<!-- /app home landing -->
